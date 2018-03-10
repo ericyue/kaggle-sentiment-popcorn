@@ -62,4 +62,5 @@ if __name__ == "__main__":
     k, _ = ensemble(valid, all)
     results = predict_proba(k, test)
 
+    
     pd.DataFrame(results.T).to_csv("ensemble.csv", index=False, header=["pos"])
